@@ -25,9 +25,23 @@ SECRET_KEY = 'django-insecure-xotoi_v=758rfccdvv&tcj_82x_x0%wof)c#i+0tbk^wg^cb3+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"
+    ".up.railway.app",
+    "elsha.blog",
+    "www.elsha.blog",
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.up.railway.app",
+    "https://elsha.blog",
+    "https://www.elsha.blog",
+]
 
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
