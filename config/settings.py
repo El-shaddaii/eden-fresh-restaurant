@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ["*"
     ".up.railway.app",
     "elsha.blog",
     "www.elsha.blog",
+    "eden-fresh-restaurant-production.up.railway.app"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
