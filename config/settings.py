@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-xotoi_v=758rfccdvv&tcj_82x_x0%wof)c#i+0tbk^wg^cb3+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"
+ALLOWED_HOSTS = [
+    "127.0.0.1",
     ".up.railway.app",
     "elsha.blog",
     "www.elsha.blog",
