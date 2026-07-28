@@ -1,0 +1,393 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EDEN Fresh Restaurant</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{% static 'css/style.css' %}"
+    >
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
+
+    <main class="menu-container">
+
+        <!-- HERO SECTION -->
+        <header class="hero">
+
+            <nav class="menu-nav">
+                <div class="logo">
+                    <span>EDEN</span>
+                    <small>FRESH</small>
+                </div>
+
+                <div class="nav-text">
+                    GOOD FOOD. GOOD MOOD.
+                </div>
+            </nav>
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        Welcome to
+                    </span>
+
+                    <h1>
+                        EDEN
+                        <span>FRESH</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Big flavor, fresh ingredients and meals made
+                        to satisfy every craving.
+                    </p>
+
+                    <div class="hero-tags">
+                        <span>Fresh Daily</span>
+                        <span>Homemade</span>
+                        <span>Full Flavor</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <div class="yellow-circle"></div>
+
+                    <img
+    src="https://i.postimg.cc/zfPGW9LZ/Chat-GPT-Image-Jul-27-2026-10-15-44-PM.png"
+    alt="EDEN Fresh signature burger"
+>
+
+                    <div class="hero-price">
+                        <small>Starting at</small>
+                        <strong>$8.99</strong>
+                    </div>
+
+                    <div class="floating-label">
+                        100% FRESH
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="scroll-text">
+                BURGERS • RICE • CHICKEN • BEEF • DRINKS • DESSERTS
+            </div>
+
+        </header>
+
+
+        <!-- BURGER SECTION -->
+        <section class="menu-section burger-section">
+
+            <div class="section-number">01</div>
+
+            <div class="section-content">
+
+                <div class="section-heading">
+
+                    <span class="small-heading">
+                        Get your hands on our
+                    </span>
+
+                    <h2>
+                        BIG
+                        <span>BURGERS</span>
+                    </h2>
+
+                    <p>
+                        Juicy, loaded and stacked with serious flavor.
+                    </p>
+
+                </div>
+
+                <div class="food-layout">
+
+                    <div class="menu-list">
+
+                        <article class="menu-item featured">
+
+                            <div class="item-text">
+                                <div class="item-title">
+                                    <h3>Classic Burger</h3>
+                                    <span class="popular">Popular</span>
+                                </div>
+
+                                <p>
+                                    Beef patty, lettuce, tomatoes,
+                                    onions and signature sauce.
+                                </p>
+                            </div>
+
+                            <div class="price">$8.99</div>
+
+                        </article>
+
+                        <article class="menu-item">
+
+                            <div class="item-text">
+                                <h3>Cheese Burger</h3>
+
+                                <p>
+                                    Classic beef burger loaded with
+                                    melted American cheese.
+                                </p>
+                            </div>
+
+                            <div class="price">$9.99</div>
+
+                        </article>
+
+                        <article class="menu-item">
+
+                            <div class="item-text">
+                                <h3>Double Burger</h3>
+
+                                <p>
+                                    Two juicy beef patties, double cheese
+                                    and EDEN house sauce.
+                                </p>
+                            </div>
+
+                            <div class="price">$11.99</div>
+
+                        </article>
+
+                        <article class="menu-item">
+
+                            <div class="item-text">
+                                <h3>Chicken Burger</h3>
+
+                                <p>
+                                    Crispy chicken, fresh slaw,
+                                    pickles and spicy mayo.
+                                </p>
+                            </div>
+
+                            <div class="price">$9.49</div>
+
+                        </article>
+
+                    </div>
+
+                    <div class="section-image">
+
+                        <div class="image-frame"></div>
+
+                        <img
+                            src="{% static 'images/burger.jpg' %}"
+                            alt="Loaded EDEN burger"
+                        >
+
+                        <div class="image-sticker">
+                            <strong>HOT</strong>
+                            <span>& FRESH</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RICE SECTION -->
+        <section class="menu-section rice-section">
+
+            <div class="section-number">02</div>
+
+            <div class="section-content">
+
+                <div class="section-heading light-heading">
+
+                    <span class="small-heading">
+                        Loaded plates of
+                    </span>
+
+                    <h2>
+                        FIRE
+                        <span>RICE</span>
+                    </h2>
+
+                    <p>
+                        Rich spices, tender meats and unforgettable flavor.
+                    </p>
+
+                </div>
+
+                <div class="food-layout reverse">
+
+                    <div class="menu-list">
+
+                        <article class="menu-item dark-item featured">
+
+                            <div class="item-text">
+                                <div class="item-title">
+                                    <h3>Chicken Fried Rice</h3>
+                                    <span class="popular">Best Seller</span>
+                                </div>
+
+                                <p>
+                                    Fried rice loaded with seasoned
+                                    chicken and fresh vegetables.
+                                </p>
+                            </div>
+
+                            <div class="price">$12.99</div>
+
+                        </article>
+
+                        <article class="menu-item dark-item">
+
+                            <div class="item-text">
+                                <h3>Beef Fried Rice</h3>
+
+                                <p>
+                                    Savory beef, vegetables and rice
+                                    tossed in our special sauce.
+                                </p>
+                            </div>
+
+                            <div class="price">$13.99</div>
+
+                        </article>
+
+                        <article class="menu-item dark-item">
+
+                            <div class="item-text">
+                                <h3>Jollof Rice</h3>
+
+                                <p>
+                                    Bold tomato rice seasoned with
+                                    aromatic West African spices.
+                                </p>
+                            </div>
+
+                            <div class="price">$11.99</div>
+
+                        </article>
+
+                        <article class="menu-item dark-item">
+
+                            <div class="item-text">
+                                <h3>Pilau Rice</h3>
+
+                                <p>
+                                    Fragrant spiced rice slowly cooked
+                                    for deep, comforting flavor.
+                                </p>
+                            </div>
+
+                            <div class="price">$12.49</div>
+
+                        </article>
+
+                    </div>
+
+                    <div class="section-image rice-image">
+
+                        <div class="image-frame"></div>
+
+                        <img
+                            src="{% static 'images/rice.jpg' %}"
+                            alt="EDEN seasoned rice meal"
+                        >
+
+                        <div class="image-sticker">
+                            <strong>FULL</strong>
+                            <span>OF FLAVOR</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SPECIAL OFFER -->
+        <section class="special-banner">
+
+            <div class="special-text">
+                <span>EDEN SPECIAL</span>
+
+                <h2>
+                    Burger, fries
+                    <br>
+                    and a drink
+                </h2>
+
+                <p>
+                    The ultimate meal deal for serious hunger.
+                </p>
+            </div>
+
+            <div class="special-price">
+                <small>ONLY</small>
+                <strong>$14</strong>
+                <span>.99</span>
+            </div>
+
+            <div class="special-decoration">
+                COMBO
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div>
+                <h3>EDEN Fresh Restaurant</h3>
+                <p>Fresh • Delicious • Homemade</p>
+            </div>
+
+            <div class="footer-info">
+                <span>Call: (269) 555-0123</span>
+                <span>Open Daily: 10 AM – 10 PM</span>
+            </div>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>

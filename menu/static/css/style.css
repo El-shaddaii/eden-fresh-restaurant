@@ -1,0 +1,1101 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at top left, #ffefb0, transparent 35%),
+        radial-gradient(circle at bottom right, #ff8d65, transparent 35%),
+        #f4ead9;
+    color: #17251c;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.background-shape {
+    position: fixed;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(4px);
+    opacity: 0.45;
+}
+
+.shape-one {
+    top: -120px;
+    left: -100px;
+    width: 350px;
+    height: 350px;
+    background: #ffd425;
+}
+
+.shape-two {
+    top: 45%;
+    right: -170px;
+    width: 430px;
+    height: 430px;
+    background: #ff5a3d;
+}
+
+.shape-three {
+    bottom: -160px;
+    left: 10%;
+    width: 350px;
+    height: 350px;
+    background: #3e9d5c;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.menu-container {
+    width: min(1240px, calc(100% - 40px));
+    margin: 35px auto;
+    overflow: hidden;
+    background: #fff9eb;
+    border: 3px solid #17251c;
+    border-radius: 30px;
+    box-shadow: 18px 18px 0 #17251c;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 760px;
+    overflow: hidden;
+    padding: 30px 50px 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16, 92, 54, 0.96),
+            rgba(8, 55, 33, 0.98)
+        ),
+        url("../images/burger.jpg") center / cover;
+    color: white;
+}
+
+.hero::before {
+    position: absolute;
+    top: -130px;
+    right: -100px;
+    width: 550px;
+    height: 550px;
+    content: "";
+    border: 90px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.hero::after {
+    position: absolute;
+    bottom: 35px;
+    left: 40px;
+    width: 210px;
+    height: 210px;
+    content: "";
+    opacity: 0.12;
+    background-image:
+        radial-gradient(#fff 3px, transparent 3px);
+    background-size: 20px 20px;
+}
+
+.menu-nav {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    transform: rotate(-3deg);
+}
+
+.logo span {
+    color: #ffd425;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    padding: 5px 8px;
+    background: #ff5a3d;
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.nav-text {
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    min-height: 620px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 3;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #ffd425;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 540px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(100px, 13vw, 185px);
+    font-weight: 400;
+    line-height: 0.7;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    text-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 span {
+    display: block;
+    color: #ffd425;
+    -webkit-text-stroke: 2px #17251c;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-top: 35px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.hero-tags span {
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 100px;
+    color: white;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 550px;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 2;
+    width: min(600px, 115%);
+    height: 500px;
+    border: 8px solid #fff9eb;
+    border-radius: 50% 43% 48% 38%;
+    object-fit: cover;
+    filter: saturate(1.2) contrast(1.07);
+    transform: rotate(6deg);
+    box-shadow:
+        20px 25px 0 rgba(0, 0, 0, 0.22),
+        0 35px 70px rgba(0, 0, 0, 0.4);
+    animation: floatFood 5s ease-in-out infinite;
+}
+
+.yellow-circle {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: #ffd425;
+    box-shadow: 0 0 0 35px rgba(255, 212, 37, 0.15);
+}
+
+.hero-price {
+    position: absolute;
+    right: 0;
+    bottom: 65px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 145px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background: #ff5a3d;
+    color: white;
+    transform: rotate(10deg);
+    box-shadow: 10px 12px 0 #17251c;
+}
+
+.hero-price small {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-price strong {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    line-height: 1;
+}
+
+.floating-label {
+    position: absolute;
+    top: 80px;
+    left: -10px;
+    z-index: 4;
+    padding: 14px 22px;
+    background: white;
+    color: #17251c;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transform: rotate(-8deg);
+    box-shadow: 8px 8px 0 #ff5a3d;
+}
+
+.scroll-text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 15px;
+    background: #ffd425;
+    color: #17251c;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    letter-spacing: 7px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   GENERAL MENU SECTIONS
+========================================================= */
+
+.menu-section {
+    position: relative;
+    min-height: 750px;
+    overflow: hidden;
+    padding: 90px 65px;
+}
+
+.burger-section {
+    background:
+        linear-gradient(rgba(255, 249, 235, 0.94), rgba(255, 249, 235, 0.94)),
+        radial-gradient(#173e29 1px, transparent 1px);
+    background-size: auto, 18px 18px;
+}
+
+.rice-section {
+    background:
+        linear-gradient(135deg, #ec5a36, #c93326);
+    color: white;
+}
+
+.rice-section::before {
+    position: absolute;
+    top: -200px;
+    right: -160px;
+    width: 500px;
+    height: 500px;
+    content: "";
+    border: 75px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.section-number {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: rgba(23, 37, 28, 0.06);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 220px;
+    line-height: 1;
+}
+
+.rice-section .section-number {
+    color: rgba(255, 255, 255, 0.08);
+}
+
+.section-content {
+    position: relative;
+    z-index: 2;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.small-heading {
+    display: block;
+    margin-bottom: 5px;
+    color: #ec5a36;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(70px, 9vw, 125px);
+    font-weight: 400;
+    line-height: 0.85;
+    letter-spacing: -1px;
+}
+
+.section-heading h2 span {
+    color: #ec5a36;
+    -webkit-text-stroke: 2px #17251c;
+}
+
+.section-heading p {
+    margin-top: 18px;
+    color: #607065;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.light-heading .small-heading {
+    color: #ffd425;
+}
+
+.light-heading h2 span {
+    color: #ffd425;
+    -webkit-text-stroke: 2px #17251c;
+}
+
+.light-heading p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.food-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.food-layout.reverse {
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+.food-layout.reverse .section-image {
+    order: -1;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+========================================================= */
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 25px;
+    align-items: center;
+    padding: 21px 22px;
+    border: 2px solid #17251c;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.75);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.menu-item:hover {
+    background: white;
+    transform: translateX(8px) rotate(-1deg);
+    box-shadow: 10px 10px 0 #ffd425;
+}
+
+.menu-item.featured {
+    background: #17251c;
+    color: white;
+    transform: rotate(-1deg);
+    box-shadow: 10px 10px 0 #ffd425;
+}
+
+.menu-item.featured:hover {
+    transform: translateX(8px) rotate(0deg);
+}
+
+.item-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu-item h3 {
+    font-size: 19px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.menu-item p {
+    margin-top: 7px;
+    color: #718078;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.menu-item.featured p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    height: 52px;
+    padding: 0 12px;
+    border-radius: 15px;
+    background: #ffd425;
+    color: #17251c;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    transform: rotate(3deg);
+}
+
+.popular {
+    padding: 5px 8px;
+    border-radius: 100px;
+    background: #ec5a36;
+    color: white;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.dark-item {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(80, 12, 8, 0.22);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.dark-item:hover {
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: 10px 10px 0 #ffd425;
+}
+
+.dark-item p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.dark-item.featured {
+    border-color: #17251c;
+    background: #17251c;
+}
+
+
+/* =========================================================
+   FOOD IMAGES
+========================================================= */
+
+.section-image {
+    position: relative;
+    min-height: 480px;
+}
+
+.section-image img {
+    position: absolute;
+    inset: 30px 0 0 30px;
+    z-index: 2;
+    width: calc(100% - 30px);
+    height: 430px;
+    border: 5px solid #17251c;
+    border-radius: 40px 10px 40px 10px;
+    object-fit: cover;
+    filter: saturate(1.18) contrast(1.06);
+    transform: rotate(3deg);
+    box-shadow: 15px 15px 0 #ffd425;
+}
+
+.image-frame {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 90%;
+    height: 430px;
+    border: 4px dashed #ec5a36;
+    border-radius: 40px 10px 40px 10px;
+    transform: rotate(-5deg);
+}
+
+.rice-image .image-frame {
+    border-color: #ffd425;
+}
+
+.image-sticker {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    height: 135px;
+    border: 5px solid #fff9eb;
+    border-radius: 50%;
+    background: #ec5a36;
+    color: white;
+    transform: rotate(-12deg);
+    box-shadow: 9px 10px 0 #17251c;
+}
+
+.image-sticker strong {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 38px;
+    line-height: 0.9;
+}
+
+.image-sticker span {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.rice-image .image-sticker {
+    background: #ffd425;
+    color: #17251c;
+}
+
+
+/* =========================================================
+   SPECIAL BANNER
+========================================================= */
+
+.special-banner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: center;
+    min-height: 350px;
+    overflow: hidden;
+    padding: 55px 70px;
+    border-top: 4px solid #17251c;
+    border-bottom: 4px solid #17251c;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 212, 37, 0.96),
+            rgba(255, 178, 36, 0.95)
+        ),
+        url("../images/burger.jpg") center / cover;
+}
+
+.special-banner::after {
+    position: absolute;
+    top: -80px;
+    right: 210px;
+    width: 280px;
+    height: 280px;
+    content: "";
+    border: 50px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+.special-text {
+    position: relative;
+    z-index: 2;
+}
+
+.special-text > span {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 14px;
+    background: #ec5a36;
+    color: white;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.special-text h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(65px, 8vw, 105px);
+    font-weight: 400;
+    line-height: 0.82;
+    text-transform: uppercase;
+}
+
+.special-text p {
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.special-price {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 230px;
+    height: 230px;
+    place-content: center;
+    border: 8px solid white;
+    border-radius: 50%;
+    background: #17251c;
+    color: white;
+    transform: rotate(8deg);
+    box-shadow: 15px 15px 0 #ec5a36;
+}
+
+.special-price small {
+    grid-column: 1 / 3;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.special-price strong {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 90px;
+    line-height: 0.8;
+}
+
+.special-price span {
+    align-self: start;
+    margin-top: 8px;
+    color: #ffd425;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+}
+
+.special-decoration {
+    position: absolute;
+    right: -15px;
+    bottom: -42px;
+    color: rgba(23, 37, 28, 0.08);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 190px;
+    transform: rotate(-6deg);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 60px;
+    background: #17251c;
+    color: white;
+}
+
+footer h3 {
+    color: #ffd425;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes floatFood {
+    0%,
+    100% {
+        transform: translateY(0) rotate(6deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(3deg);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .menu-container {
+        width: min(94%, 800px);
+        box-shadow: 10px 10px 0 #17251c;
+    }
+
+    .hero {
+        padding: 25px 30px 60px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 80px 0 100px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero h1,
+    .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-tags {
+        justify-content: center;
+    }
+
+    .hero-image {
+        margin-top: 35px;
+    }
+
+    .hero-image img {
+        width: min(520px, 90%);
+        height: 430px;
+    }
+
+    .yellow-circle {
+        width: 430px;
+        height: 430px;
+    }
+
+    .floating-label {
+        left: 8%;
+    }
+
+    .hero-price {
+        right: 8%;
+    }
+
+    .menu-section {
+        padding: 75px 40px;
+    }
+
+    .food-layout,
+    .food-layout.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .food-layout.reverse .section-image {
+        order: 0;
+    }
+
+    .section-image {
+        width: min(620px, 100%);
+        margin: 20px auto 0;
+    }
+
+    .special-banner {
+        padding: 50px 40px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+    body {
+        background: #f4ead9;
+    }
+
+    .menu-container {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 20px 20px 65px;
+    }
+
+    .logo span {
+        font-size: 36px;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .hero-content {
+        min-height: auto;
+        padding: 65px 0 95px;
+    }
+
+    .hero h1 {
+        font-size: clamp(85px, 29vw, 125px);
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        min-height: 390px;
+    }
+
+    .hero-image img {
+        width: 95%;
+        height: 340px;
+        border-width: 5px;
+    }
+
+    .yellow-circle {
+        width: 320px;
+        height: 320px;
+    }
+
+    .hero-price {
+        right: 0;
+        bottom: 10px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .hero-price strong {
+        font-size: 35px;
+    }
+
+    .floating-label {
+        top: 35px;
+        left: 0;
+        padding: 10px 14px;
+        font-size: 10px;
+    }
+
+    .scroll-text {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .menu-section {
+        min-height: auto;
+        padding: 65px 20px;
+    }
+
+    .section-number {
+        top: 20px;
+        right: 10px;
+        font-size: 130px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(65px, 23vw, 95px);
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .food-layout,
+    .food-layout.reverse {
+        gap: 35px;
+    }
+
+    .menu-item {
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 17px 15px;
+    }
+
+    .menu-item h3 {
+        font-size: 15px;
+    }
+
+    .menu-item p {
+        font-size: 10px;
+    }
+
+    .price {
+        min-width: 67px;
+        height: 45px;
+        font-size: 23px;
+    }
+
+    .section-image {
+        min-height: 350px;
+    }
+
+    .section-image img {
+        inset: 20px 0 0 15px;
+        width: calc(100% - 15px);
+        height: 310px;
+    }
+
+    .image-frame {
+        right: 15px;
+        height: 310px;
+    }
+
+    .image-sticker {
+        right: 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .image-sticker strong {
+        font-size: 29px;
+    }
+
+    .special-banner {
+        grid-template-columns: 1fr;
+        padding: 55px 20px;
+        text-align: center;
+    }
+
+    .special-text h2 {
+        font-size: 68px;
+    }
+
+    .special-price {
+        width: 190px;
+        height: 190px;
+        margin: 15px auto 0;
+    }
+
+    .special-price strong {
+        font-size: 72px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 35px 20px;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   PRINT STYLING
+========================================================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .menu-container {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .hero-image img {
+        animation: none;
+    }
+
+    .menu-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+}
