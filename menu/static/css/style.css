@@ -1218,56 +1218,23 @@ footer p {
 }
 
 /* =========================================================
-   EDEN FRESH RESTAURANT
-   ORDER / CONTACT FOOTER
+   EDEN FRESH - ORDER / CONTACT SECTION
+   WHITE PAGE VERSION
    ========================================================= */
 
 .order-grid {
     position: relative;
-    isolation: isolate;
-
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
     width: min(1200px, 94%);
-    margin: 70px auto 50px;
-    padding: 10px;
-
-    font-family: inherit;
-}
-
-/* Decorative background glow */
-.order-grid::before,
-.order-grid::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-
-    width: 260px;
-    height: 260px;
-
-    border-radius: 50%;
-    filter: blur(70px);
-    opacity: 0.25;
-    pointer-events: none;
-}
-
-.order-grid::before {
-    top: -100px;
-    left: -100px;
-    background: #ffb703;
-}
-
-.order-grid::after {
-    right: -100px;
-    bottom: -100px;
-    background: #25d366;
+    margin: 65px auto 55px;
 }
 
 
 /* =========================================================
-   BASE CARD
+   CARDS
    ========================================================= */
 
 .order-card {
@@ -1278,74 +1245,27 @@ footer p {
     align-items: flex-start;
     gap: 20px;
 
-    min-height: 280px;
+    min-height: 275px;
     padding: 30px 26px;
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 28px;
+    background: #ffffff;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.14),
-            rgba(255, 255, 255, 0.04)
-        );
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid #eeeeee;
+    border-radius: 24px;
 
     box-shadow:
-        0 20px 45px rgba(0, 0, 0, 0.22),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        0 8px 25px rgba(0, 0, 0, 0.07),
+        0 2px 5px rgba(0, 0, 0, 0.04);
 
     transition:
-        transform 0.35s cubic-bezier(.2,.8,.2,1),
-        box-shadow 0.35s ease,
-        border-color 0.35s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
-/* Card shine */
+
+/* Color strip across the top */
 .order-card::before {
-    content: "";
-
-    position: absolute;
-    top: -100%;
-    left: -70%;
-
-    width: 55%;
-    height: 300%;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,0.18),
-        transparent
-    );
-
-    transform: rotate(25deg);
-    transition: left 0.7s ease;
-
-    pointer-events: none;
-}
-
-.order-card:hover::before {
-    left: 130%;
-}
-
-.order-card:hover {
-    transform: translateY(-10px);
-
-    box-shadow:
-        0 30px 65px rgba(0, 0, 0, 0.30),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-
-/* =========================================================
-   CARD TOP DECORATION
-   ========================================================= */
-
-.order-card::after {
     content: "";
 
     position: absolute;
@@ -1353,113 +1273,148 @@ footer p {
     left: 0;
 
     width: 100%;
-    height: 5px;
+    height: 6px;
 
     background: linear-gradient(
         90deg,
         #ffb703,
         #fb5607,
-        #ff006e,
-        #8338ec,
-        #25d366
+        #ff006e
     );
-
-    background-size: 300% 100%;
-    animation: edenGradient 7s linear infinite;
 }
 
-@keyframes edenGradient {
-    0% {
-        background-position: 0% 50%;
-    }
 
-    50% {
-        background-position: 100% 50%;
-    }
+/* Hover */
+.order-card:hover {
+    transform: translateY(-8px);
 
-    100% {
-        background-position: 0% 50%;
-    }
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12);
+
+    border-color: #dddddd;
 }
 
 
 /* =========================================================
-   ICON
+   SUBTLE CARD BACKGROUND DECORATION
+   ========================================================= */
+
+.phone-card {
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(255, 183, 3, 0.12),
+            transparent 35%
+        ),
+        #ffffff;
+}
+
+.whatsapp-card {
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(37, 211, 102, 0.12),
+            transparent 35%
+        ),
+        #ffffff;
+}
+
+.location-card {
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(131, 56, 236, 0.11),
+            transparent 35%
+        ),
+        #ffffff;
+}
+
+
+/* =========================================================
+   ICONS
    ========================================================= */
 
 .order-icon {
-    flex: 0 0 70px;
+    position: relative;
 
-    width: 70px;
-    height: 70px;
+    flex: 0 0 68px;
+
+    width: 68px;
+    height: 68px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 22px;
+    border-radius: 20px;
 
-    font-size: 32px;
+    font-size: 31px;
     font-weight: 900;
 
-    color: white;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.25),
-            rgba(255,255,255,0.05)
-        );
-
-    border: 1px solid rgba(255,255,255,0.22);
-
-    box-shadow:
-        0 12px 25px rgba(0,0,0,0.18),
-        inset 0 1px 1px rgba(255,255,255,0.25);
-
     transition:
-        transform 0.35s ease,
-        border-radius 0.35s ease;
+        transform 0.3s ease,
+        border-radius 0.3s ease;
 }
 
 .order-card:hover .order-icon {
-    transform: rotate(-7deg) scale(1.08);
-    border-radius: 28px;
+    transform: rotate(-5deg) scale(1.08);
+    border-radius: 24px;
 }
 
 
-/* WhatsApp icon */
-.whatsapp-card .order-icon {
+/* Phone */
+.phone-card .order-icon {
+    color: #ffffff;
+
     background:
-        linear-gradient(145deg, #25d366, #128c7e);
+        linear-gradient(
+            135deg,
+            #ffb703,
+            #fb5607
+        );
 
     box-shadow:
-        0 12px 30px rgba(37, 211, 102, 0.35);
+        0 10px 22px rgba(251, 86, 7, 0.25);
 }
 
+
+/* WhatsApp */
+.whatsapp-card .order-icon {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25d366,
+            #128c7e
+        );
+
+    box-shadow:
+        0 10px 22px rgba(37, 211, 102, 0.25);
+}
+
+
+/* Location */
+.location-card .order-icon {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8338ec,
+            #ff006e
+        );
+
+    box-shadow:
+        0 10px 22px rgba(131, 56, 236, 0.23);
+}
+
+
+/* WhatsApp letters */
 .order-icon span {
     font-size: 17px;
+    font-weight: 950;
     letter-spacing: -1px;
-}
-
-
-/* Phone icon */
-.phone-card .order-icon {
-    background:
-        linear-gradient(145deg, #ffb703, #fb5607);
-
-    box-shadow:
-        0 12px 30px rgba(251, 86, 7, 0.30);
-}
-
-
-/* Location icon */
-.location-card .order-icon {
-    background:
-        linear-gradient(145deg, #8338ec, #ff006e);
-
-    box-shadow:
-        0 12px 30px rgba(131, 56, 236, 0.30);
 }
 
 
@@ -1474,21 +1429,28 @@ footer p {
     flex: 1;
 }
 
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
 .card-label {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 7px;
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
-    font-size: 11px;
+    color: #777777;
+
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: 2px;
 
-    color: rgba(255,255,255,0.68);
+    letter-spacing: 1.8px;
 }
 
-/* Tiny decorative dot */
+
+/* Little colored dot */
 .card-label::before {
     content: "";
 
@@ -1496,9 +1458,23 @@ footer p {
     height: 7px;
 
     border-radius: 50%;
-    background: currentColor;
+}
 
-    box-shadow: 0 0 10px currentColor;
+
+/* Different dot colors */
+.phone-card .card-label::before {
+    background: #fb5607;
+    box-shadow: 0 0 8px rgba(251, 86, 7, 0.4);
+}
+
+.whatsapp-card .card-label::before {
+    background: #25d366;
+    box-shadow: 0 0 8px rgba(37, 211, 102, 0.4);
+}
+
+.location-card .card-label::before {
+    background: #8338ec;
+    box-shadow: 0 0 8px rgba(131, 56, 236, 0.4);
 }
 
 
@@ -1507,16 +1483,15 @@ footer p {
    ========================================================= */
 
 .order-card h3 {
-    margin: 3px 0 12px;
+    margin: 4px 0 12px;
 
-    font-size: clamp(21px, 2vw, 28px);
-    line-height: 1.15;
+    color: #171717;
+
+    font-size: clamp(20px, 2vw, 26px);
     font-weight: 900;
-    letter-spacing: -0.7px;
 
-    color: #ffffff;
-
-    text-wrap: balance;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
 }
 
 
@@ -1527,15 +1502,16 @@ footer p {
 .order-card p {
     margin: 0 0 20px;
 
+    color: #666666;
+
     font-size: 14px;
     line-height: 1.65;
-
-    color: rgba(255,255,255,0.72);
 }
 
 .location-text {
+    color: #555555 !important;
     font-size: 15px !important;
-    line-height: 1.7 !important;
+    line-height: 1.65 !important;
 }
 
 
@@ -1546,22 +1522,23 @@ footer p {
 .phone-number {
     display: inline-block;
 
-    margin: 3px 0 10px;
+    margin: 3px 0 9px;
 
-    font-size: clamp(20px, 2vw, 26px);
+    color: #171717;
+
+    font-size: clamp(20px, 2vw, 25px);
     font-weight: 900;
-    letter-spacing: 0.5px;
 
-    color: #ffffff;
     text-decoration: none;
+    letter-spacing: 0.2px;
 
     transition:
-        color 0.25s ease,
-        transform 0.25s ease;
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .phone-number:hover {
-    color: #ffb703;
+    color: #fb5607;
     transform: translateX(4px);
 }
 
@@ -1579,16 +1556,18 @@ footer p {
     justify-content: center;
 
     min-height: 46px;
+
     padding: 12px 18px;
 
-    border-radius: 14px;
+    border-radius: 13px;
 
-    font-size: 11px;
+    color: #ffffff !important;
+
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: 1px;
 
+    letter-spacing: 1px;
     text-decoration: none;
-    color: #ffffff;
 
     overflow: hidden;
 
@@ -1598,234 +1577,184 @@ footer p {
 }
 
 
-/* Button shine */
-.whatsapp-button::before,
-.location-button::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        110deg,
-        transparent 20%,
-        rgba(255,255,255,0.35) 50%,
-        transparent 80%
-    );
-
-    transform: translateX(-120%);
-    transition: transform 0.55s ease;
-}
-
-.whatsapp-button:hover::before,
-.location-button:hover::before {
-    transform: translateX(120%);
-}
-
-
-/* WhatsApp button */
+/* WhatsApp */
 .whatsapp-button {
     background:
-        linear-gradient(135deg, #25d366, #128c7e);
+        linear-gradient(
+            135deg,
+            #25d366,
+            #128c7e
+        );
 
     box-shadow:
-        0 10px 25px rgba(37, 211, 102, 0.28);
+        0 8px 18px rgba(37, 211, 102, 0.25);
 }
 
 .whatsapp-button:hover {
     transform: translateY(-3px);
+
     box-shadow:
-        0 16px 30px rgba(37, 211, 102, 0.38);
+        0 13px 25px rgba(37, 211, 102, 0.35);
 }
 
 
-/* Location button */
+/* Location */
 .location-button {
     background:
-        linear-gradient(135deg, #8338ec, #ff006e);
+        linear-gradient(
+            135deg,
+            #8338ec,
+            #ff006e
+        );
 
     box-shadow:
-        0 10px 25px rgba(131, 56, 236, 0.28);
+        0 8px 18px rgba(131, 56, 236, 0.25);
 }
 
 .location-button:hover {
     transform: translateY(-3px);
+
     box-shadow:
-        0 16px 30px rgba(131, 56, 236, 0.38);
+        0 13px 25px rgba(131, 56, 236, 0.35);
 }
 
 
 /* =========================================================
-   INDIVIDUAL CARD PERSONALITY
+   BUTTON SHINE
    ========================================================= */
 
-.phone-card {
+.whatsapp-button::after,
+.location-button::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
     background:
-        radial-gradient(
-            circle at 100% 0%,
-            rgba(255,183,3,0.18),
-            transparent 40%
-        ),
         linear-gradient(
-            145deg,
-            rgba(255,255,255,0.13),
-            rgba(255,255,255,0.035)
+            90deg,
+            transparent,
+            rgba(255,255,255,0.35),
+            transparent
         );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.55s ease;
 }
 
-.whatsapp-card {
-    background:
-        radial-gradient(
-            circle at 100% 0%,
-            rgba(37,211,102,0.20),
-            transparent 42%
-        ),
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.13),
-            rgba(255,255,255,0.035)
-        );
-}
-
-.location-card {
-    background:
-        radial-gradient(
-            circle at 100% 0%,
-            rgba(131,56,236,0.20),
-            transparent 42%
-        ),
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.13),
-            rgba(255,255,255,0.035)
-        );
+.whatsapp-button:hover::after,
+.location-button:hover::after {
+    left: 140%;
 }
 
 
 /* =========================================================
-   FUN LITTLE FLOATING DECORATIONS
+   FUN EDEN DETAILS
    ========================================================= */
 
 .phone-card .order-card-content::after {
-    content: "☎ READY TO EAT?";
+    content: "HUNGRY? CALL US! 🍗";
+
     position: absolute;
 
-    right: -5px;
+    right: -4px;
     bottom: -5px;
+
+    color: rgba(251, 86, 7, 0.10);
 
     font-size: 9px;
     font-weight: 900;
-    letter-spacing: 1.5px;
 
-    color: rgba(255,183,3,0.16);
+    letter-spacing: 1px;
 
-    transform: rotate(-8deg);
+    transform: rotate(-7deg);
+    pointer-events: none;
 }
 
 .whatsapp-card .order-card-content::after {
-    content: "👀 DON'T MISS THE SPECIALS";
+    content: "GOOD FOOD ALERT 🚨";
+
     position: absolute;
 
-    right: -5px;
+    right: -4px;
     bottom: -5px;
+
+    color: rgba(37, 211, 102, 0.12);
 
     font-size: 9px;
     font-weight: 900;
+
     letter-spacing: 1px;
 
-    color: rgba(37,211,102,0.18);
-
-    transform: rotate(-8deg);
+    transform: rotate(-7deg);
+    pointer-events: none;
 }
 
 .location-card .order-card-content::after {
-    content: "📍 COME FIND US";
+    content: "FOLLOW THE SMELL 👀";
+
     position: absolute;
 
-    right: -5px;
+    right: -4px;
     bottom: -5px;
+
+    color: rgba(131, 56, 236, 0.11);
 
     font-size: 9px;
     font-weight: 900;
-    letter-spacing: 1.5px;
 
-    color: rgba(255,0,110,0.18);
+    letter-spacing: 1px;
 
-    transform: rotate(-8deg);
+    transform: rotate(-7deg);
+    pointer-events: none;
 }
 
 
 /* =========================================================
-   ANIMATED FLOAT
+   RESPONSIVE
    ========================================================= */
 
-.order-card:nth-child(1) {
-    animation: cardFloat 5s ease-in-out infinite;
-}
+@media (max-width: 950px) {
 
-.order-card:nth-child(2) {
-    animation: cardFloat 5s ease-in-out 0.8s infinite;
-}
-
-.order-card:nth-child(3) {
-    animation: cardFloat 5s ease-in-out 1.6s infinite;
-}
-
-@keyframes cardFloat {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-4px);
-    }
-}
-
-.order-card:hover {
-    animation-play-state: paused;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 900px) {
     .order-grid {
         grid-template-columns: 1fr;
+
         width: min(650px, 92%);
-        gap: 18px;
-        margin-top: 50px;
+        gap: 20px;
     }
 
     .order-card {
         min-height: auto;
-        padding: 26px 22px;
     }
 }
 
 
 @media (max-width: 520px) {
+
     .order-grid {
         width: 94%;
-        gap: 16px;
+        margin-top: 45px;
     }
 
     .order-card {
         flex-direction: column;
-        gap: 17px;
 
         padding: 25px 20px;
-        border-radius: 23px;
+
+        border-radius: 21px;
     }
 
     .order-icon {
         width: 62px;
         height: 62px;
-        flex-basis: 62px;
 
-        border-radius: 19px;
-        font-size: 28px;
+        flex-basis: 62px;
     }
 
     .order-card h3 {
@@ -1844,16 +1773,16 @@ footer p {
 
 
 /* =========================================================
-   REDUCED MOTION ACCESSIBILITY
+   ACCESSIBILITY
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
     .order-card,
-    .order-card::before,
-    .order-card::after,
-    .whatsapp-button::before,
-    .location-button::before {
-        animation: none !important;
+    .order-icon,
+    .phone-number,
+    .whatsapp-button,
+    .location-button {
         transition: none !important;
     }
 }
