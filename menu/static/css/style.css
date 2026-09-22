@@ -1666,7 +1666,7 @@ footer p {
     right: -4px;
     bottom: -5px;
 
-    color: rgba(251, 86, 7, 0.10);
+    color: rgb(0, 0, 0);
 
     font-size: 9px;
     font-weight: 900;
@@ -1685,7 +1685,7 @@ footer p {
     right: -4px;
     bottom: -5px;
 
-    color: rgba(37, 211, 102, 0.12);
+    color: rgb(0, 0, 0);
 
     font-size: 9px;
     font-weight: 900;
@@ -1697,14 +1697,14 @@ footer p {
 }
 
 .location-card .order-card-content::after {
-    content: "FOLLOW THE SMELL 👀";
+    content: "FOLLOW THE AROMA 👀";
 
     position: absolute;
 
     right: -4px;
     bottom: -5px;
 
-    color: rgba(131, 56, 236, 0.11);
+    color: rgb(0, 0, 0);
 
     font-size: 9px;
     font-weight: 900;
