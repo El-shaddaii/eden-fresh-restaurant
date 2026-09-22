@@ -1216,3 +1216,46 @@ footer p {
     background: #17251c;
     color: white;
 }
+
+/* =========================================================
+   LOCATION CARD
+========================================================= */
+
+.location-card {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    background: rgba(255, 212, 37, 0.08);
+    border-color: rgba(255, 212, 37, 0.3);
+}
+
+.location-card .order-icon {
+    background: #ec5a36;
+    color: #fff;
+    font-size: 30px;
+}
+
+.location-text {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.location-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 20px;
+    border: 2px solid #ffd425;
+    border-radius: 50px;
+    color: #ffd425;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.location-button:hover {
+    background: #ffd425;
+    color: #17251c;
+    transform: translateY(-3px);
+}
